@@ -1,8 +1,15 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+import PageNav from '../components/PageNav';
+import AppNav from '../components/AppNav';
 function Homepage() {
   return (
     <div>
-      <h1>WorldWise</h1>
+      <PageNav />
+      <AppNav />
+      <h1>WorldWise111</h1>
+
+      <Link to='/app'>got to the app</Link>
     </div>
   );
 }
