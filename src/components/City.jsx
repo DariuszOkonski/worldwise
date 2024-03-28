@@ -3,6 +3,7 @@ import styles from './City.module.css';
 import { useCities } from '../contexts/CitiesContext';
 import { useEffect } from 'react';
 import Spinner from './Spinner';
+import BackButton from './BackButton';
 
 const formatDate = (date) =>
   new Intl.DateTimeFormat('en', {
@@ -15,7 +16,6 @@ const formatDate = (date) =>
 function City() {
   const { id } = useParams();
   const { currentCity, getCity, isLoading } = useCities();
-  console.log(isLoading);
 
   useEffect(() => {
     getCity(id);
@@ -57,7 +57,9 @@ function City() {
         </a>
       </div>
 
-      <div></div>
+      <div>
+        <BackButton />
+      </div>
     </div>
   );
 }
